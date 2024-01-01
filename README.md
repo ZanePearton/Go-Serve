@@ -55,7 +55,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Authors
 
-- **[Your Name](Your Github Profile Link)** - Initial work
+- **[Zane Pearton](https://github.com/ZanePearton)** - Initial work. 
 
 ## Acknowledgments
 
