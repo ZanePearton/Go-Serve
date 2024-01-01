@@ -57,10 +57,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 - **[Zane Pearton](https://github.com/ZanePearton)** - Initial work. 
 
-## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc.
-
-Replace placeholders and add additional sections as needed for your specific project. This README is structured to provide an overview, instructions on getting started, understanding the code, and other relevant information for anyone interested in your project.
