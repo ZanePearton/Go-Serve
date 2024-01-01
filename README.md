@@ -19,6 +19,7 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/ZanePearton/go-serve.git
 ```
+
 ## Running the Server
 
 Navigate to the directory where you cloned the repo.
@@ -27,30 +28,39 @@ Execute the program:
 go run server.go
 ```
 
-### Go-Serve Server
-1. **Package Declaration**: `package main` - This declares that this file is part of the main package, which is the executable package for a Go application.
+Now, you can visit `http://localhost:8080` in your browser to see the server running.
 
-2. **Imports**:
-    - `fmt`: Importing the "fmt" package allows you to use functions for formatting text, including printing to the console.
-    - `net/http`: This package provides HTTP client and server implementations, and you're using it to create the web server and handle HTTP requests.
+## Understanding the Code
 
-3. **Handler Function**:
-    - `func handler(w http.ResponseWriter, r *http.Request)`: This function is a handler that gets called every time you make an HTTP request to the server. It takes two parameters:
-        - `w` (an `http.ResponseWriter`), which is used to write the HTTP response.
-        - `r` (an `*http.Request`), which represents the client HTTP request.
-    - `fmt.Fprintf(w, "Hello, World! This is a basic web server!")`: This line sends a string back to the client as part of the HTTP response.
+- **Package Declaration**: `package main` - Indicates that this file belongs to the main package.
+- **Imports**:
+    - `fmt`: Utilized for formatting and printing text.
+    - `net/http`: Provides HTTP client and server implementations.
+- **Handler Function**:
+    - `func handler(w http.ResponseWriter, r *http.Request)`: Called for every HTTP request to the server.
+    - `fmt.Fprintf(w, "Hello, World! This is a basic web server!")`: Writes the greeting message to the HTTP response.
+- **Main Function**:
+    - `func main()`: Entry point of the program.
+    - `http.HandleFunc("/", handler)`: Directs the root URL to the handler function.
+    - `fmt.Println("Server is running on http://localhost:8080")`: Indicates server is running.
+    - `http.ListenAndServe(":8080", nil)`: Starts the HTTP server.
 
-4. **Main Function**:
-    - `func main()`: The main function, which gets called when you run the program.
-    - `http.HandleFunc("/", handler)`: This tells the http package to handle all requests to the web root ("/") with the `handler` function.
-    - `fmt.Println("Server is running on http://localhost:8080")`: Prints a message to the console indicating that the server is running.
-    - `http.ListenAndServe(":8080", nil)`: This starts an HTTP server with a given address (":8080") and handler (nil implies using the default handler, which you've set up as `handler` function for the root path).
+## Contributing
 
-To run this server:
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](link).
 
-1. **Save the Code**: Save the code into a file with a `.go` extension, for example, `server.go`.
-2. **Run the Code**:
-    - Open your terminal.
-    - Navigate to the directory containing your `server.go` file.
-    - Run the command `go run server.go`.
-3. **Access the Server**: Open a web browser and go to `http://localhost:8080`. You should see "Hello, World! This is a basic web server!" displayed.
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+## Authors
+
+- **[Your Name](Your Github Profile Link)** - Initial work
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc.
+
+Replace placeholders and add additional sections as needed for your specific project. This README is structured to provide an overview, instructions on getting started, understanding the code, and other relevant information for anyone interested in your project.
